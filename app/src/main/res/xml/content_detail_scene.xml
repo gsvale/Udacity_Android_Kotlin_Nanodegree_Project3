@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    // ConstraintSets for start and end states
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/file_name_title_tv"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintWidth_percent="0.45"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <Constraint
+            android:id="@+id/file_name_tv"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/file_name_title_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <Constraint
+            android:id="@+id/status_title_tv"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintWidth_percent="0.45"
+            app:layout_constraintTop_toBottomOf="@+id/file_name_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <Constraint
+            android:id="@+id/status_tv"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/file_name_tv"
+            app:layout_constraintStart_toEndOf="@+id/status_title_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/file_name_title_tv"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintWidth_percent="0.45"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <Constraint
+            android:id="@+id/file_name_tv"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/file_name_title_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <Constraint
+            android:id="@+id/status_title_tv"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintWidth_percent="0.45"
+            app:layout_constraintTop_toBottomOf="@+id/file_name_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+        <Constraint
+            android:id="@+id/status_tv"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/file_name_tv"
+            app:layout_constraintStart_toEndOf="@+id/status_title_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+             />
+    </ConstraintSet>
+
+    // Set transition to auto start and duration to 3 seconds
+    // Slowly the status text starts to become visible to the user
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:autoTransition="animateToEnd"
+        app:duration="3000">
+
+        <KeyFrameSet>
+
+        <KeyAttribute
+            app:framePosition="0"
+            app:motionTarget="@id/status_tv"
+            android:alpha="0.0"
+            />
+
+        <KeyAttribute
+            app:framePosition="10"
+            app:motionTarget="@id/status_tv"
+            android:alpha="0.1"
+            />
+
+        <KeyAttribute
+            app:framePosition="20"
+            app:motionTarget="@id/status_tv"
+            android:alpha="0.2"
+            />
+
+        <KeyAttribute
+            app:framePosition="30"
+            app:motionTarget="@id/status_tv"
+            android:alpha="0.3"
+            />
+
+        <KeyAttribute
+            app:framePosition="40"
+            app:motionTarget="@id/status_tv"
+            android:alpha="0.4"
+            />
+
+        <KeyAttribute
+            app:framePosition="50"
+            app:motionTarget="@id/status_tv"
+            android:alpha="0.5"
+            />
+
+        <KeyAttribute
+            app:framePosition="60"
+            app:motionTarget="@id/status_tv"
+            android:alpha="0.6"
+            />
+
+        <KeyAttribute
+            app:framePosition="70"
+            app:motionTarget="@id/status_tv"
+            android:alpha="0.7"
+            />
+
+        <KeyAttribute
+            app:framePosition="80"
+            app:motionTarget="@id/status_tv"
+            android:alpha="0.8"
+            />
+
+        <KeyAttribute
+            app:framePosition="90"
+            app:motionTarget="@id/status_tv"
+            android:alpha="0.9"
+            />
+
+        <KeyAttribute
+            app:framePosition="100"
+            app:motionTarget="@id/status_tv"
+            android:alpha="1"
+            />
+
+        </KeyFrameSet>
+
+    </Transition>
+
+
+
+</MotionScene>

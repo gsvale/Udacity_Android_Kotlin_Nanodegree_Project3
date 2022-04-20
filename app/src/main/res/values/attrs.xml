@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    // Attributes related to button normal/background color,
+       color when loading/downloading file and
+       button text color
+
+    <declare-styleable name="LoadingButton">
+        <attr name="buttonColor" format="color" />
+        <attr name="loadingColor" format="color" />
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+</resources>
